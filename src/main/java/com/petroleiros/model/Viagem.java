@@ -14,9 +14,13 @@ public class Viagem {
     private Porto portoDestino;
     private LocalDateTime dataPartida;
     private LocalDateTime dataChegadaPrevista;
+    private LocalDateTime dataChegadaReal;       // preenchida ao concluir
     private EstadoViagem estado;
+    private String motivoCancelamento;            // preenchido ao cancelar
     private List<Carga> cargas = new ArrayList<>();
     private List<Tripulante> tripulacao = new ArrayList<>();
+    private int numCargas;       // contagem usada nas listagens (sem carregar a lista completa)
+    private int numTripulantes;  // contagem usada nas listagens
 
     public Viagem() {}
 
@@ -75,6 +79,12 @@ public class Viagem {
     public LocalDateTime getDataChegadaPrevista()                              { return dataChegadaPrevista; }
     public void setDataChegadaPrevista(LocalDateTime dataChegadaPrevista)      { this.dataChegadaPrevista = dataChegadaPrevista; }
 
+    public LocalDateTime getDataChegadaReal()                                  { return dataChegadaReal; }
+    public void setDataChegadaReal(LocalDateTime dataChegadaReal)              { this.dataChegadaReal = dataChegadaReal; }
+
+    public String getMotivoCancelamento()                                       { return motivoCancelamento; }
+    public void setMotivoCancelamento(String motivoCancelamento)                { this.motivoCancelamento = motivoCancelamento; }
+
     public EstadoViagem getEstado()                    { return estado; }
     public void setEstado(EstadoViagem estado)         { this.estado = estado; }
 
@@ -83,6 +93,12 @@ public class Viagem {
 
     public List<Tripulante> getTripulacao()                    { return tripulacao; }
     public void setTripulacao(List<Tripulante> tripulacao)     { this.tripulacao = tripulacao; }
+
+    public int getNumCargas()                  { return numCargas; }
+    public void setNumCargas(int numCargas)    { this.numCargas = numCargas; }
+
+    public int getNumTripulantes()                     { return numTripulantes; }
+    public void setNumTripulantes(int numTripulantes)  { this.numTripulantes = numTripulantes; }
 
     @Override
     public boolean equals(Object o) {

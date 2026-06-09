@@ -9,16 +9,16 @@ public class TipoNavio {
     private String id;
     private String nome;
     private int maxCargasPorViagem;
-    private String discriminator; // CRUDE | REFINADOS | QUIMICO | HIBRIDO
+    private String categoria; // Crude | Produto | Químico | Químico/Produto
     private List<TipoCarga> cargasCompativeis = new ArrayList<>();
 
     public TipoNavio() {}
 
-    public TipoNavio(String id, String nome, int maxCargasPorViagem, String discriminator) {
+    public TipoNavio(String id, String nome, int maxCargasPorViagem, String categoria) {
         this.id = id;
         this.nome = nome;
         this.maxCargasPorViagem = maxCargasPorViagem;
-        this.discriminator = discriminator;
+        this.categoria = categoria;
     }
 
     public boolean aceitaCarga(TipoCarga tipoCarga) {
@@ -34,8 +34,8 @@ public class TipoNavio {
     public int getMaxCargasPorViagem()                         { return maxCargasPorViagem; }
     public void setMaxCargasPorViagem(int maxCargasPorViagem)  { this.maxCargasPorViagem = maxCargasPorViagem; }
 
-    public String getDiscriminator()                   { return discriminator; }
-    public void setDiscriminator(String discriminator) { this.discriminator = discriminator; }
+    public String getCategoria()                        { return categoria; }
+    public void setCategoria(String categoria)          { this.categoria = categoria; }
 
     public List<TipoCarga> getCargasCompativeis()                          { return cargasCompativeis; }
     public void setCargasCompativeis(List<TipoCarga> cargasCompativeis)    { this.cargasCompativeis = cargasCompativeis; }
