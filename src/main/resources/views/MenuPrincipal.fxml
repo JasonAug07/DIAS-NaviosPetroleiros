@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.petroleiros.controller.MenuPrincipalController">
+
+    <top>
+        <VBox styleClass="header">
+            <Label text="Sistema de Gestão de Navios Petroleiros"
+                   styleClass="titulo-header"/>
+        </VBox>
+    </top>
+
+    <left>
+        <VBox styleClass="sidebar" spacing="8" prefWidth="200">
+            <padding>
+                <Insets top="20" left="24" right="24" bottom="20"/>
+            </padding>
+            <Label text="NAVEGAÇÃO" styleClass="sidebar-label"/>
+
+            <Button text="🚢  Navios"       onAction="#abrirNavios"      maxWidth="Infinity"/>
+            <Button text="⚓  Portos"       onAction="#abrirPortos"      maxWidth="Infinity"/>
+            <Button text="🗂️  Tipos"        onAction="#abrirTipos"       maxWidth="Infinity"/>
+            <Button text="📦  Cargas"       onAction="#abrirCargas"      maxWidth="Infinity"/>
+            <Button text="🧭  Viagens"      onAction="#abrirViagens"     maxWidth="Infinity"/>
+            <Button text="👥  Tripulação"   onAction="#abrirTripulacao"  maxWidth="Infinity"/>
+            <Button text="📜  Eventos"      onAction="#abrirEventos"     maxWidth="Infinity"/>
+
+            <Separator/>
+            <Button text="❌  Sair"         onAction="#sair"
+                    maxWidth="Infinity" styleClass="btn-danger"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="conteudoCentral">
+            <VBox alignment="CENTER" spacing="16">
+                <Label text="Bem-vindo ao Sistema de Gestão de Navios Petroleiros"
+                       styleClass="titulo-boas-vindas"/>
+                <Label text="Seleccione um módulo no menu lateral para começar."
+                       styleClass="subtitulo-boas-vindas"/>
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

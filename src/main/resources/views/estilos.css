@@ -1,0 +1,244 @@
+/* ============================================================
+   Folha de estilos principal da aplicacao.
+   Aspeto sobrio de aplicacao desktop classica (Windows 7 / Aero):
+   cinzentos claros, azul discreto, gradientes subtis, cantos
+   pouco arredondados. Consistente em todos os modulos.
+   ============================================================ */
+
+.root {
+    -fx-font-family: "Segoe UI", "Tahoma", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #1e1e1e;
+    -fx-focus-color: #3c7fb1;
+    -fx-faint-focus-color: #3c7fb133;
+}
+
+/* ---- Cabecalho ---- */
+.header {
+    -fx-background-color: linear-gradient(to bottom, #4a6f8a, #3a5a73);
+    -fx-padding: 14 24 14 24;
+    -fx-border-color: transparent transparent #2c4658 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.titulo-header {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* ---- Barra lateral de navegacao ---- */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #eef2f5, #dde5ec);
+    -fx-border-color: transparent #c4ccd3 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+.sidebar-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6a7785;
+    -fx-padding: 0 0 6 2;
+}
+.sidebar .button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #1e2e3a;
+    -fx-font-size: 13px;
+    -fx-padding: 8 12 8 12;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-cursor: hand;
+}
+.sidebar .button:hover {
+    -fx-background-color: linear-gradient(to bottom, #eaf6fd, #d6eefc);
+    -fx-border-color: #a7cdf0;
+}
+.sidebar .button:pressed {
+    -fx-background-color: #cbe8f6;
+    -fx-border-color: #3c7fb1;
+}
+
+/* ---- Conteudo dos modulos ---- */
+.modulo-container {
+    -fx-background-color: #f0f0f0;
+}
+.titulo-modulo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f3a4d;
+}
+
+/* ---- Ecra de boas-vindas ---- */
+.titulo-boas-vindas {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c4658;
+}
+.subtitulo-boas-vindas {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a6b78;
+}
+
+/* ---- Formularios ---- */
+.formulario {
+    -fx-background-color: #f0f0f0;
+}
+.titulo-formulario {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f3a4d;
+}
+.label-campo {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333;
+}
+.label-info, .conexao-detalhe {
+    -fx-font-size: 12px;
+    -fx-text-fill: #5a6b78;
+}
+.label-erro {
+    -fx-font-size: 12px;
+    -fx-text-fill: #b00020;
+}
+
+/* ============================================================
+   Controlos base
+   ============================================================ */
+
+/* ---- Botoes genericos ---- */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #f7f8f9, #e3e7eb);
+    -fx-border-color: #adb3ba;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-text-fill: #1e1e1e;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #eaf6fd, #cfeafb);
+    -fx-border-color: #3c7fb1;
+}
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #d6eefc, #bfe3f7);
+    -fx-border-color: #2c6791;
+}
+
+/* ---- Botoes de accao com cor ---- */
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom, #5b9bd5, #3c7fb1);
+    -fx-text-fill: white;
+    -fx-border-color: #2c6791;
+    -fx-font-weight: bold;
+}
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to bottom, #6fb0e6, #4a8fc4);
+}
+.btn-success {
+    -fx-background-color: linear-gradient(to bottom, #79b765, #5a9647);
+    -fx-text-fill: white;
+    -fx-border-color: #4a7d3a;
+    -fx-font-weight: bold;
+}
+.btn-success:hover {
+    -fx-background-color: linear-gradient(to bottom, #8cc878, #6aa755);
+}
+.btn-danger {
+    -fx-background-color: linear-gradient(to bottom, #d76b6b, #b84444);
+    -fx-text-fill: white;
+    -fx-border-color: #963636;
+    -fx-font-weight: bold;
+}
+.btn-danger:hover {
+    -fx-background-color: linear-gradient(to bottom, #e07e7e, #c55353);
+}
+/* O botao Sair fica na sidebar mas mantem-se vermelho e centrado */
+.sidebar .button.btn-danger {
+    -fx-alignment: CENTER;
+}
+
+/* ---- Campos de texto, combos, datas ---- */
+.text-field, .text-area, .date-picker, .combo-box, .spinner {
+    -fx-background-color: white;
+    -fx-border-color: #abadb3;
+    -fx-border-radius: 2;
+    -fx-background-radius: 2;
+    -fx-padding: 3 6 3 6;
+}
+.text-field:focused, .text-area:focused,
+.combo-box:focused, .date-picker:focused {
+    -fx-border-color: #3c7fb1;
+}
+
+/* ---- Tabelas ---- */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #c4ccd3;
+    -fx-border-radius: 2;
+}
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #f3f5f7, #dfe4e9);
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent #d0d6db transparent transparent;
+    -fx-border-width: 0 1 1 0;
+    -fx-size: 30;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #33414d;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 8 0 8;
+}
+.table-row-cell {
+    -fx-border-color: transparent transparent #edf0f2 transparent;
+    -fx-table-cell-border-color: transparent;
+}
+.table-row-cell:odd {
+    -fx-background-color: #f7f9fb;
+}
+.table-row-cell:selected {
+    -fx-background-color: #cbe8f6;
+    -fx-text-fill: #1e1e1e;
+}
+.table-view .table-cell {
+    -fx-padding: 5 8 5 8;
+    -fx-text-fill: #1e1e1e;
+}
+
+/* ---- Separadores de abas (TabPane) ---- */
+.tab-pane .tab-header-background {
+    -fx-background-color: #e4e9ed;
+}
+.tab-pane .tab {
+    -fx-background-color: linear-gradient(to bottom, #f3f5f7, #e0e5ea);
+    -fx-border-color: #c4ccd3;
+    -fx-padding: 5 14 5 14;
+}
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+}
+.tab .tab-label {
+    -fx-text-fill: #33414d;
+    -fx-font-weight: bold;
+}
+
+/* ---- Separadores ---- */
+.separator .line {
+    -fx-border-color: #c4ccd3;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* ---- Barras de deslocamento discretas ---- */
+.scroll-bar {
+    -fx-background-color: #eceff1;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #c0c8cf;
+    -fx-background-radius: 4;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #a9b3bb;
+}

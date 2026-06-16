@@ -1,0 +1,71 @@
+/* ── Raiz da janela (fundo transparente para bordas arredondadas) ── */
+.conexao-root {
+    -fx-background-color: transparent;
+}
+
+/* ── Card principal ── */
+.conexao-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 24, 0, 0, 6);
+    -fx-padding: 32 36 28 36;
+    -fx-spacing: 16;
+    -fx-alignment: center;
+}
+
+/* ── Ícone / título ── */
+.conexao-titulo {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a2e;
+}
+
+/* ── Texto de estado (ex: tentativa 1/5) ── */
+.conexao-estado {
+    -fx-font-size: 13px;
+    -fx-text-fill: #444;
+}
+
+/* ── Texto de detalhe (contagem regressiva + erro) ── */
+.conexao-detalhe {
+    -fx-font-size: 11px;
+    -fx-text-fill: #999;
+}
+
+/* ── Barra de progresso ── */
+.conexao-progress {
+    -fx-pref-width: 300;
+    -fx-pref-height: 6;
+    -fx-accent: #4a90d9;
+}
+
+.conexao-progress .track {
+    -fx-background-color: #e8edf2;
+    -fx-background-radius: 4;
+}
+
+.conexao-progress .bar {
+    -fx-background-color: #4a90d9;
+    -fx-background-radius: 4;
+}
+
+/* ── Botão cancelar ── */
+.conexao-btn-cancelar {
+    -fx-background-color: transparent;
+    -fx-border-color: #d0d0d0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: #666;
+    -fx-font-size: 12px;
+    -fx-padding: 7 20 7 20;
+    -fx-cursor: hand;
+}
+
+.conexao-btn-cancelar:hover {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #bbb;
+    -fx-text-fill: #333;
+}
