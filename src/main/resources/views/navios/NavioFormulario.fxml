@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.NavioFormularioController"
+      spacing="14" styleClass="formulario"
+      stylesheets="@../estilos.css">
+
+    <padding>
+        <Insets top="20" left="24" right="24" bottom="20"/>
+    </padding>
+
+    <Label fx:id="labelTitulo" text="Registar Navio" styleClass="titulo-formulario"/>
+    <Separator/>
+
+    <GridPane hgap="12" vgap="10">
+        <Label text="ID:"                  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoId"         GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="280"/>
+
+        <Label text="Nome:"                GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoNome"       GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Código IMO:"          GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoIMO"        GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Tipo de Navio:"       GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboTipoNavio"   GridPane.rowIndex="3" GridPane.columnIndex="1"
+                  prefWidth="280"/>
+
+        <Label text="Capacidade (t):"      GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoCapacidade" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Nº Tanques:"          GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoTanques"    GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Bandeira:"            GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoBandeira"   GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="Ano Fabrico:"         GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoAno"        GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <Label text="Estado:"              GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboEstado"      GridPane.rowIndex="8" GridPane.columnIndex="1"
+                  prefWidth="280"/>
+
+        <Label text="Porto Actual:"        GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboPorto"       GridPane.rowIndex="9" GridPane.columnIndex="1"
+                  prefWidth="280" promptText="(Em alto mar)"/>
+    </GridPane>
+
+    <Label fx:id="labelErro" styleClass="label-erro" wrapText="true"/>
+
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar"  onAction="#cancelar"/>
+        <Button text="Guardar"   onAction="#guardar" styleClass="btn-primary"/>
+    </HBox>
+</VBox>

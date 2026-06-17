@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.NaviosController"
+      spacing="12" styleClass="modulo-container">
+    <padding>
+        <Insets top="20" left="24" right="24" bottom="20"/>
+    </padding>
+
+    <!-- Cabeçalho -->
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="Gestão de Navios" styleClass="titulo-modulo"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="+ Registar Navio" onAction="#abrirFormularioNovo"
+                styleClass="btn-primary"/>
+    </HBox>
+
+    <Separator/>
+
+    <!-- Filtros -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Filtrar:"/>
+        <ComboBox fx:id="filtroEstado" promptText="Todos os estados" prefWidth="180"/>
+        <TextField fx:id="filtroBusca" promptText="Pesquisar por nome ou IMO..." prefWidth="250"/>
+        <Button text="Pesquisar" onAction="#pesquisar"/>
+        <Button text="Limpar" onAction="#limparFiltros"/>
+    </HBox>
+
+    <!-- Tabela -->
+    <TableView fx:id="tabelaNavios" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNome"          text="Nome"            prefWidth="150"/>
+            <TableColumn fx:id="colIMO"           text="Código IMO"      prefWidth="110"/>
+            <TableColumn fx:id="colTipo"          text="Tipo"            prefWidth="140"/>
+            <TableColumn fx:id="colCapacidade"    text="Capacidade (t)"  prefWidth="120"/>
+            <TableColumn fx:id="colBandeira"      text="Bandeira"        prefWidth="100"/>
+            <TableColumn fx:id="colEstado"        text="Estado"          prefWidth="110"/>
+            <TableColumn fx:id="colPorto"         text="Porto Actual"    prefWidth="130"/>
+        </columns>
+        <placeholder>
+            <Label text="Nenhum navio registado."/>
+        </placeholder>
+    </TableView>
+
+    <!-- Acções sobre selecção -->
+    <HBox spacing="10">
+        <Button text="✏️  Editar"              onAction="#editarSelecionado"/>
+        <Button text="🔄  Alterar Estado"      onAction="#alterarEstado"/>
+        <Button text="🗑️  Eliminar"            onAction="#eliminarSelecionado" styleClass="btn-danger"/>
+    </HBox>
+
+</VBox>
