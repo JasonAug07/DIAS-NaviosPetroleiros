@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.TiposController"
+      spacing="12" styleClass="modulo-container">
+    <padding><Insets top="20" left="20" right="20" bottom="20"/></padding>
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="Gestão de Tipos" styleClass="titulo-modulo"/>
+    </HBox>
+    <Separator/>
+    <TabPane>
+        <Tab text="Tipos de Navio" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="10"/></padding>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <Button text="+ Novo Tipo de Navio" onAction="#novoTipoNavio" styleClass="btn-primary"/>
+                </HBox>
+                <TableView fx:id="tabelaTiposNavio" prefHeight="300">
+                    <columns>
+                        <TableColumn fx:id="colTNNome"          text="Nome"               prefWidth="180"/>
+                        <TableColumn fx:id="colTNMaxCargas"     text="Máx. Cargas"        prefWidth="100"/>
+                        <TableColumn fx:id="colTNDiscriminator" text="Categoria"          prefWidth="120"/>
+                        <TableColumn fx:id="colTNCompativeis"   text="Cargas Compatíveis" prefWidth="250"/>
+                    </columns>
+                    <placeholder><Label text="Nenhum tipo de navio registado."/></placeholder>
+                </TableView>
+                <HBox spacing="10">
+                    <Button text="✏️  Editar"   onAction="#editarTipoNavio"/>
+                    <Button text="🗑️  Eliminar" onAction="#eliminarTipoNavio" styleClass="btn-danger"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab text="Tipos de Carga" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="10"/></padding>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <Button text="+ Novo Tipo de Carga" onAction="#novoTipoCarga" styleClass="btn-primary"/>
+                </HBox>
+                <TableView fx:id="tabelaTiposCarga" prefHeight="300">
+                    <columns>
+                        <TableColumn fx:id="colTCNome"       text="Nome"       prefWidth="200"/>
+                        <TableColumn fx:id="colTCInflamavel" text="Inflamável" prefWidth="90"/>
+                        <TableColumn fx:id="colTCCorrosiva"  text="Corrosiva"  prefWidth="90"/>
+                        <TableColumn fx:id="colTCToxica"     text="Tóxica"     prefWidth="90"/>
+                    </columns>
+                    <placeholder><Label text="Nenhum tipo de carga registado."/></placeholder>
+                </TableView>
+                <HBox spacing="10">
+                    <Button text="✏️  Editar"   onAction="#editarTipoCarga"/>
+                    <Button text="🗑️  Eliminar" onAction="#eliminarTipoCarga" styleClass="btn-danger"/>
+                </HBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>
