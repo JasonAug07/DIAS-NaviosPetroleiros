@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.TripulanteFormularioController"
+      spacing="14" styleClass="formulario" stylesheets="@../estilos.css">
+    <padding><Insets top="20" left="24" right="24" bottom="20"/></padding>
+    <Label fx:id="labelTitulo" text="Registar Tripulante" styleClass="titulo-formulario"/>
+    <Separator/>
+    <GridPane hgap="12" vgap="10">
+        <Label text="ID:"     GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoId"   GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="260"/>
+        <Label text="Nome:"   GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoNome" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Função:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboFuncao" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="260"/>
+    </GridPane>
+    <Label fx:id="labelErro" styleClass="label-erro" wrapText="true"/>
+    <Separator/>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" onAction="#cancelar"/>
+        <Button text="Guardar"  onAction="#guardar" styleClass="btn-primary"/>
+    </HBox>
+</VBox>

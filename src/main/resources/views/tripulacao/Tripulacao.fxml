@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.TripulacaoController"
+      spacing="12" styleClass="modulo-container">
+    <padding><Insets top="20" left="20" right="20" bottom="20"/></padding>
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="Gestão de Tripulação" styleClass="titulo-modulo"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="+ Registar Tripulante" onAction="#abrirFormularioNovo" styleClass="btn-primary"/>
+    </HBox>
+    <Separator/>
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Função:"/>
+        <ComboBox fx:id="filtroFuncao" prefWidth="160" onAction="#pesquisar"/>
+        <TextField fx:id="filtroBusca" promptText="Pesquisar por nome..." prefWidth="240"/>
+        <Button text="Pesquisar" onAction="#pesquisar"/>
+        <Button text="Limpar"    onAction="#limparFiltros"/>
+    </HBox>
+    <TableView fx:id="tabelaTripulantes" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNome"   text="Nome"            prefWidth="200"/>
+            <TableColumn fx:id="colFuncao" text="Função"          prefWidth="130"/>
+            <TableColumn fx:id="colEstado" text="Disponibilidade" prefWidth="150"/>
+        </columns>
+        <placeholder><Label text="Nenhum tripulante registado."/></placeholder>
+    </TableView>
+    <HBox spacing="10">
+        <Button text="✏️  Editar"    onAction="#editarSelecionado"/>
+        <Button text="📜  Histórico" onAction="#verHistorico"/>
+        <Button text="🗑️  Eliminar"  onAction="#eliminarSelecionado" styleClass="btn-danger"/>
+    </HBox>
+</VBox>
