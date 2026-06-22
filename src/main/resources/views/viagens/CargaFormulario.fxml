@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.CargaFormularioController"
+      spacing="14" styleClass="formulario" stylesheets="@../estilos.css">
+    <padding>
+        <Insets top="20" left="24" right="24" bottom="20"/>
+    </padding>
+    <Label text="Adicionar Carga à Viagem" styleClass="titulo-formulario"/>
+    <Separator/>
+    <GridPane hgap="12" vgap="10">
+        <Label text="ID:"               GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoId"      GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="280"/>
+        <Label text="Designação:"       GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoDesignacao" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Tipo de Carga:"    GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboTipoCarga" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="280"/>
+        <Label text="Peso (t):"         GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoPeso"    GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label text="Volume (m³):"      GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoVolume"  GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Label text="Nº Tanques:"       GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoTanques" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        <Label text="Porto de Carga:"   GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboPortoCarga"    GridPane.rowIndex="6" GridPane.columnIndex="1" prefWidth="280"/>
+        <Label text="Porto de Descarga:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboPortoDescarga" GridPane.rowIndex="7" GridPane.columnIndex="1" prefWidth="280"/>
+    </GridPane>
+    <Label fx:id="labelErro" styleClass="label-erro" wrapText="true"/>
+    <Separator/>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" onAction="#cancelar"/>
+        <Button text="Adicionar" onAction="#guardar" styleClass="btn-primary"/>
+    </HBox>
+</VBox>

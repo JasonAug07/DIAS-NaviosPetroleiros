@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.ViagemFormularioController"
+      spacing="14" styleClass="formulario" stylesheets="@../estilos.css">
+    <padding><Insets top="20" left="24" right="24" bottom="20"/></padding>
+    <Label fx:id="labelTitulo" text="Criar Viagem" styleClass="titulo-formulario"/>
+    <Separator/>
+    <GridPane hgap="12" vgap="10">
+        <Label text="ID:"              GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="campoId"     GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="300"/>
+        <Label text="Navio:"           GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboNavio"   GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="300"/>
+        <Label text="Porto Origem:"    GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboOrigem"  GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="300"/>
+        <Label text="Porto Destino:"   GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboDestino" GridPane.rowIndex="3" GridPane.columnIndex="1" prefWidth="300"/>
+        <Label text="Data Partida:"    GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <HBox spacing="8"              GridPane.rowIndex="4" GridPane.columnIndex="1">
+            <DatePicker fx:id="dataPartida" prefWidth="185"/>
+            <TextField  fx:id="horaPartida" prefWidth="80" promptText="HH:mm"/>
+        </HBox>
+        <Label text="Data Chegada Prev.:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <HBox spacing="8"              GridPane.rowIndex="5" GridPane.columnIndex="1">
+            <DatePicker fx:id="dataChegada" prefWidth="185"/>
+            <TextField  fx:id="horaChegada" prefWidth="80" promptText="HH:mm"/>
+        </HBox>
+    </GridPane>
+    <Label fx:id="labelErro" styleClass="label-erro" wrapText="true"/>
+    <Separator/>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" onAction="#cancelar"/>
+        <Button text="Guardar"  onAction="#guardar" styleClass="btn-primary"/>
+    </HBox>
+</VBox>

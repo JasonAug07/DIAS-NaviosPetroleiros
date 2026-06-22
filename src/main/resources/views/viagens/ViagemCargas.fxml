@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.ViagemCargasController"
+      spacing="12" styleClass="modulo-container" stylesheets="@../estilos.css">
+    <padding><Insets top="16" left="16" right="16" bottom="16"/></padding>
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label fx:id="labelTitulo" text="Cargas da Viagem" styleClass="titulo-modulo"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="+ Adicionar Carga" onAction="#abrirFormularioCarga" styleClass="btn-primary"/>
+    </HBox>
+    <Label fx:id="labelCapacidade" styleClass="label-info"/>
+    <Separator/>
+    <TableView fx:id="tabelaCargas" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colDesignacao"    text="Designação"     prefWidth="180"/>
+            <TableColumn fx:id="colTipoCarga"     text="Tipo"           prefWidth="130"/>
+            <TableColumn fx:id="colPeso"          text="Peso (t)"       prefWidth="90"/>
+            <TableColumn fx:id="colVolume"        text="Volume (m³)"    prefWidth="90"/>
+            <TableColumn fx:id="colTanques"       text="Tanques"        prefWidth="80"/>
+            <TableColumn fx:id="colPortoCarga"    text="Porto Carga"    prefWidth="120"/>
+            <TableColumn fx:id="colPortoDescarga" text="Porto Descarga" prefWidth="120"/>
+        </columns>
+        <placeholder><Label text="Sem cargas associadas a esta viagem."/></placeholder>
+    </TableView>
+    <HBox spacing="10">
+        <Button text="🗑️  Remover Carga" onAction="#removerCarga" styleClass="btn-danger"/>
+    </HBox>
+</VBox>

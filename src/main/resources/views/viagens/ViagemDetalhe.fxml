@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.ViagemDetalheController"
+      spacing="12" styleClass="modulo-container" stylesheets="@../estilos.css">
+    <padding><Insets top="16" left="16" right="16" bottom="16"/></padding>
+    <Label text="Detalhe da Viagem" styleClass="titulo-modulo"/>
+    <Separator/>
+    <GridPane hgap="16" vgap="8">
+        <Label text="ID:"               GridPane.rowIndex="0"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblId"            GridPane.rowIndex="0"  GridPane.columnIndex="1"/>
+        <Label text="Estado:"           GridPane.rowIndex="1"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblEstado"        GridPane.rowIndex="1"  GridPane.columnIndex="1"/>
+        <Label text="Navio:"            GridPane.rowIndex="2"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblNavio"         GridPane.rowIndex="2"  GridPane.columnIndex="1"/>
+        <Label text="Origem:"           GridPane.rowIndex="3"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblOrigem"        GridPane.rowIndex="3"  GridPane.columnIndex="1"/>
+        <Label text="Destino:"          GridPane.rowIndex="4"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblDestino"       GridPane.rowIndex="4"  GridPane.columnIndex="1"/>
+        <Label text="Partida:"          GridPane.rowIndex="5"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblPartida"       GridPane.rowIndex="5"  GridPane.columnIndex="1"/>
+        <Label text="Chegada Prev.:"    GridPane.rowIndex="6"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblChegada"       GridPane.rowIndex="6"  GridPane.columnIndex="1"/>
+        <Label text="Peso Total:"       GridPane.rowIndex="7"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblPesoTotal"     GridPane.rowIndex="7"  GridPane.columnIndex="1"/>
+        <Label text="Capacidade Usada:" GridPane.rowIndex="8"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <ProgressBar fx:id="barraCapacidade" GridPane.rowIndex="8" GridPane.columnIndex="1" prefWidth="220"/>
+        <Label text="Nº Cargas:"        GridPane.rowIndex="9"  GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblNumCargas"     GridPane.rowIndex="9"  GridPane.columnIndex="1"/>
+        <Label text="Tripulação:"       GridPane.rowIndex="10" GridPane.columnIndex="0" styleClass="label-campo"/>
+        <Label fx:id="lblTripulacao"    GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+    </GridPane>
+    <Separator/>
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Fechar" onAction="#fechar"/>
+    </HBox>
+</VBox>

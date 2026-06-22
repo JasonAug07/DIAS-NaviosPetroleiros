@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.ViagensController"
+      spacing="12" styleClass="modulo-container">
+    <padding>
+        <Insets top="20" left="24" right="24" bottom="20"/>
+    </padding>
+
+    <!-- Cabeçalho -->
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="Gestão de Viagens" styleClass="titulo-modulo"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="+ Criar Viagem" onAction="#abrirFormularioNovo" styleClass="btn-primary"/>
+    </HBox>
+
+    <Separator/>
+
+    <!-- Filtro por estado -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Estado:"/>
+        <ComboBox fx:id="filtroEstado" promptText="Todos" prefWidth="160"
+                  onAction="#pesquisar"/>
+    </HBox>
+
+    <!-- Tabela -->
+    <TableView fx:id="tabelaViagens" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId"        text="ID"           prefWidth="90"/>
+            <TableColumn fx:id="colNavio"     text="Navio"        prefWidth="140"/>
+            <TableColumn fx:id="colOrigem"    text="Origem"       prefWidth="120"/>
+            <TableColumn fx:id="colDestino"   text="Destino"      prefWidth="120"/>
+            <TableColumn fx:id="colPartida"   text="Partida"      prefWidth="130"/>
+            <TableColumn fx:id="colChegada"   text="Chegada Prev." prefWidth="130"/>
+            <TableColumn fx:id="colEstado"    text="Estado"       prefWidth="100"/>
+            <TableColumn fx:id="colCargas"    text="Cargas"       prefWidth="70"/>
+            <TableColumn fx:id="colTripulacao" text="Tripulação"   prefWidth="80"/>
+        </columns>
+        <placeholder>
+            <Label text="Nenhuma viagem registada."/>
+        </placeholder>
+    </TableView>
+
+    <!-- Acções de ciclo de vida -->
+    <HBox spacing="10">
+        <Button text="▶  Iniciar"       onAction="#iniciarViagem"   styleClass="btn-success"/>
+        <Button text="✔  Concluir"      onAction="#concluirViagem"  styleClass="btn-primary"/>
+        <Button text="✖  Cancelar"      onAction="#cancelarViagem"  styleClass="btn-danger"/>
+        <Separator orientation="VERTICAL"/>
+        <Button text="📦  Cargas"       onAction="#gerirCargas"/>
+        <Button text="👥  Tripulação"   onAction="#gerirTripulacao"/>
+        <Button text="🔍  Detalhe"      onAction="#verDetalhe"/>
+    </HBox>
+
+</VBox>
