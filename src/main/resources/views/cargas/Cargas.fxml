@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.CargasController"
+      spacing="12" styleClass="modulo-container">
+    <padding><Insets top="20" left="20" right="20" bottom="20"/></padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="Cargas (visão global)" styleClass="titulo-modulo"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="↻  Atualizar" onAction="#atualizar"/>
+    </HBox>
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="filtroBusca" promptText="Pesquisar por designação, tipo ou viagem..." prefWidth="320"/>
+        <Button text="Pesquisar" onAction="#pesquisar"/>
+    </HBox>
+
+    <TableView fx:id="tabelaCargas" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colDesignacao"    text="Designação"     prefWidth="160"/>
+            <TableColumn fx:id="colTipo"          text="Tipo"           prefWidth="120"/>
+            <TableColumn fx:id="colViagem"        text="Viagem"         prefWidth="90"/>
+            <TableColumn fx:id="colTanques"       text="Tanques"        prefWidth="70"/>
+            <TableColumn fx:id="colVolume"        text="Volume"         prefWidth="90"/>
+            <TableColumn fx:id="colPeso"          text="Peso"           prefWidth="90"/>
+            <TableColumn fx:id="colPortoCarga"    text="Porto Carga"    prefWidth="140"/>
+            <TableColumn fx:id="colPortoDescarga" text="Porto Descarga" prefWidth="140"/>
+        </columns>
+        <placeholder><Label text="Nenhuma carga registada."/></placeholder>
+    </TableView>
+
+    <Label text="As cargas são geridas dentro de cada viagem. Este ecrã serve apenas para consulta global."
+           styleClass="conexao-detalhe"/>
+</VBox>

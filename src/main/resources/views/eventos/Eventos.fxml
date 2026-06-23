@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.petroleiros.controller.EventosController"
+      spacing="12" styleClass="modulo-container">
+    <padding><Insets top="20" left="20" right="20" bottom="20"/></padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="Log de Eventos" styleClass="titulo-modulo"/>
+    </HBox>
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Navio:"/>
+        <ComboBox fx:id="comboNavio" prefWidth="220" promptText="Seleccione um navio"/>
+        <Button text="Filtrar" onAction="#filtrarPorNavio"/>
+        <Button text="↻  Ver todos" onAction="#verTodos"/>
+    </HBox>
+
+    <TableView fx:id="tabelaEventos" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colData"      text="Data"      prefWidth="130"/>
+            <TableColumn fx:id="colNavio"     text="Navio"     prefWidth="130"/>
+            <TableColumn fx:id="colTipo"      text="Evento"    prefWidth="150"/>
+            <TableColumn fx:id="colViagem"    text="Viagem"    prefWidth="90"/>
+            <TableColumn fx:id="colPorto"     text="Porto"     prefWidth="120"/>
+            <TableColumn fx:id="colDescricao" text="Descrição" prefWidth="320"/>
+        </columns>
+        <placeholder><Label text="Sem eventos registados."/></placeholder>
+    </TableView>
+
+    <Label fx:id="labelInfo" styleClass="conexao-detalhe"/>
+</VBox>
