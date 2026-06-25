@@ -46,7 +46,7 @@ public class TipoNavioService {
                 throw new BusinessException("Tipo de navio não encontrado.");
         } catch (SQLException e) {
             throw new BusinessException(
-                "Não é possível eliminar este tipo de navio — existem navios associados.", e);
+                "Não é possível eliminar este tipo de navio - existem navios associados.", e);
         }
     }
 

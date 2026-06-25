@@ -46,13 +46,13 @@
 
     <!-- Acções de ciclo de vida -->
     <HBox spacing="10">
-        <Button text="▶  Iniciar"       onAction="#iniciarViagem"   styleClass="btn-success"/>
-        <Button text="✔  Concluir"      onAction="#concluirViagem"  styleClass="btn-primary"/>
-        <Button text="✖  Cancelar"      onAction="#cancelarViagem"  styleClass="btn-danger"/>
+        <Button text="Iniciar"       onAction="#iniciarViagem"   styleClass="btn-success"/>
+        <Button text="Concluir"      onAction="#concluirViagem"  styleClass="btn-primary"/>
+        <Button text="Cancelar"      onAction="#cancelarViagem"  styleClass="btn-danger"/>
         <Separator orientation="VERTICAL"/>
-        <Button text="📦  Cargas"       onAction="#gerirCargas"/>
-        <Button text="👥  Tripulação"   onAction="#gerirTripulacao"/>
-        <Button text="🔍  Detalhe"      onAction="#verDetalhe"/>
+        <Button text="Cargas"       onAction="#gerirCargas"/>
+        <Button text="Tripulação"   onAction="#gerirTripulacao"/>
+        <Button text="Detalhe"      onAction="#verDetalhe"/>
     </HBox>
 
 </VBox>

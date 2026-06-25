@@ -131,6 +131,6 @@ public class ViagemFormularioController implements Initializable {
         return viagem;
     }
 
-    private void mostrarErro(String msg) { labelErro.setText("⚠ " + msg); }
+    private void mostrarErro(String msg) { labelErro.setText(msg); }
     private void limparErro()            { labelErro.setText(""); }
 }

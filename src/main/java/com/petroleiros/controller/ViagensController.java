@@ -177,7 +177,7 @@ public class ViagensController implements Initializable {
         Viagem v = getSelecionada("gerir cargas de");
         if (v == null) return;
         abrirSubModulo("/views/viagens/ViagemCargas.fxml", v,
-            "Cargas da Viagem — " + v.getId());
+            "Cargas da Viagem - " + v.getId());
     }
 
     @FXML
@@ -185,7 +185,7 @@ public class ViagensController implements Initializable {
         Viagem v = getSelecionada("gerir tripulação de");
         if (v == null) return;
         abrirSubModulo("/views/viagens/ViagemTripulacao.fxml", v,
-            "Tripulação da Viagem — " + v.getId());
+            "Tripulação da Viagem - " + v.getId());
     }
 
     @FXML
@@ -193,10 +193,10 @@ public class ViagensController implements Initializable {
         Viagem v = getSelecionada("ver detalhe de");
         if (v == null) return;
         abrirSubModulo("/views/viagens/ViagemDetalhe.fxml", v,
-            "Detalhe da Viagem — " + v.getId());
+            "Detalhe da Viagem - " + v.getId());
     }
 
-    // ── Helpers ──────────────────────────────────────────────────────────────
+    // -- Helpers --------------------------------------------------------------
 
     private Viagem getSelecionada(String accao) {
         Viagem v = tabelaViagens.getSelectionModel().getSelectedItem();

@@ -149,7 +149,7 @@ public class TripulacaoController implements Initializable {
             resumoTxt = "Sem dados de histórico.";
         } else {
             String ultima = resumo.dataUltimaViagem() == null
-                    ? "—" : resumo.dataUltimaViagem().format(fmt);
+                    ? "-" : resumo.dataUltimaViagem().format(fmt);
             resumoTxt = "Total de viagens: " + resumo.totalViagens() +
                     "      Concluídas: " + resumo.viagensConcluidas() +
                     "      Em curso: " + resumo.viagensEmCurso() +
@@ -168,11 +168,11 @@ public class TripulacaoController implements Initializable {
         cNavio.setPrefWidth(150);
         TableColumn<TripulanteDAO.ViagemDoTripulante, String> cRota = new TableColumn<>("Rota");
         cRota.setCellValueFactory(d -> new SimpleStringProperty(
-                d.getValue().origem() + "  →  " + d.getValue().destino()));
+                d.getValue().origem() + "  ->  " + d.getValue().destino()));
         cRota.setPrefWidth(220);
         TableColumn<TripulanteDAO.ViagemDoTripulante, String> cData = new TableColumn<>("Partida");
         cData.setCellValueFactory(d -> new SimpleStringProperty(
-                d.getValue().dataPartida() == null ? "—" : d.getValue().dataPartida().format(fmt)));
+                d.getValue().dataPartida() == null ? "-" : d.getValue().dataPartida().format(fmt)));
         cData.setPrefWidth(130);
         TableColumn<TripulanteDAO.ViagemDoTripulante, String> cEstado = new TableColumn<>("Estado");
         cEstado.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().estado()));

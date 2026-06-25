@@ -61,7 +61,7 @@ public class ViagemCargasController implements Initializable, ViagemAwareControl
     public void setViagem(Viagem viagem, Stage stage) {
         this.viagem = viagem;
         this.stage  = stage;
-        labelTitulo.setText("Cargas — Viagem " + viagem.getId());
+        labelTitulo.setText("Cargas - Viagem " + viagem.getId());
         carregarDados();
     }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
@@ -20,23 +21,46 @@
             </padding>
             <Label text="NAVEGAÇÃO" styleClass="sidebar-label"/>
 
-            <Button text="🚢  Navios"       onAction="#abrirNavios"      maxWidth="Infinity"/>
-            <Button text="⚓  Portos"       onAction="#abrirPortos"      maxWidth="Infinity"/>
-            <Button text="🗂️  Tipos"        onAction="#abrirTipos"       maxWidth="Infinity"/>
-            <Button text="📦  Cargas"       onAction="#abrirCargas"      maxWidth="Infinity"/>
-            <Button text="🧭  Viagens"      onAction="#abrirViagens"     maxWidth="Infinity"/>
-            <Button text="👥  Tripulação"   onAction="#abrirTripulacao"  maxWidth="Infinity"/>
-            <Button text="📜  Eventos"      onAction="#abrirEventos"     maxWidth="Infinity"/>
+            <Button text="Navios" onAction="#abrirNavios" maxWidth="Infinity" graphicTextGap="12">
+                <graphic><ImageView fitWidth="22" fitHeight="22" preserveRatio="true">
+                    <Image url="@../images/boat.png"/></ImageView></graphic>
+            </Button>
+            <Button text="Portos" onAction="#abrirPortos" maxWidth="Infinity" graphicTextGap="12">
+                <graphic><ImageView fitWidth="22" fitHeight="22" preserveRatio="true">
+                    <Image url="@../images/port.png"/></ImageView></graphic>
+            </Button>
+            <Button text="Tipos" onAction="#abrirTipos" maxWidth="Infinity" graphicTextGap="12">
+                <graphic><ImageView fitWidth="22" fitHeight="22" preserveRatio="true">
+                    <Image url="@../images/warning.png"/></ImageView></graphic>
+            </Button>
+            <Button text="Cargas" onAction="#abrirCargas" maxWidth="Infinity" graphicTextGap="12">
+                <graphic><ImageView fitWidth="22" fitHeight="22" preserveRatio="true">
+                    <Image url="@../images/box.png"/></ImageView></graphic>
+            </Button>
+            <Button text="Viagens" onAction="#abrirViagens" maxWidth="Infinity" graphicTextGap="12">
+                <graphic><ImageView fitWidth="22" fitHeight="22" preserveRatio="true">
+                    <Image url="@../images/distance.png"/></ImageView></graphic>
+            </Button>
+            <Button text="Tripulação" onAction="#abrirTripulacao" maxWidth="Infinity" graphicTextGap="12">
+                <graphic><ImageView fitWidth="22" fitHeight="22" preserveRatio="true">
+                    <Image url="@../images/sailor.png"/></ImageView></graphic>
+            </Button>
+            <Button text="Eventos" onAction="#abrirEventos" maxWidth="Infinity" graphicTextGap="12">
+                <graphic><ImageView fitWidth="22" fitHeight="22" preserveRatio="true">
+                    <Image url="@../images/document.png"/></ImageView></graphic>
+            </Button>
 
             <Separator/>
-            <Button text="❌  Sair"         onAction="#sair"
-                    maxWidth="Infinity" styleClass="btn-danger"/>
+            <Button text="Sair" onAction="#sair" maxWidth="Infinity" styleClass="btn-danger"/>
         </VBox>
     </left>
 
     <center>
         <StackPane fx:id="conteudoCentral">
-            <VBox alignment="CENTER" spacing="16">
+            <VBox alignment="CENTER" spacing="18">
+                <ImageView fitWidth="120" fitHeight="120" preserveRatio="true">
+                    <Image url="@../images/logo.png"/>
+                </ImageView>
                 <Label text="Bem-vindo ao Sistema de Gestão de Navios Petroleiros"
                        styleClass="titulo-boas-vindas"/>
                 <Label text="Seleccione um módulo no menu lateral para começar."

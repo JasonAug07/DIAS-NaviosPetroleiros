@@ -7,7 +7,7 @@ public class Carga {
     private String id;
     private String designacao;
     private TipoCarga tipoCarga;
-    private String viagemId; // FK — carregado lazy para evitar ciclos
+    private String viagemId; // FK - carregado lazy para evitar ciclos
     private int numTanquesOcupados;
     private double volume;
     private double peso;

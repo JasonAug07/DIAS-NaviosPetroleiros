@@ -79,7 +79,7 @@ public class EventosController implements Initializable {
             dados.setAll(eventoDAO.listarPorNavio(navio.getId()));
             double atraso = navioService.atrasoMedio(navio.getId());
             labelInfo.setText(String.format(
-                    "%s — %d evento(s).  Atraso médio das viagens concluídas: %.1f h",
+                    "%s - %d evento(s).  Atraso médio das viagens concluídas: %.1f h",
                     navio.getNome(), dados.size(), atraso));
         } catch (SQLException e) {
             AlertHelper.erro("Erro ao carregar eventos", e.getMessage());
@@ -91,7 +91,7 @@ public class EventosController implements Initializable {
         try {
             comboNavio.getSelectionModel().clearSelection();
             dados.setAll(eventoDAO.listarTodos());
-            labelInfo.setText("Todos os eventos — " + dados.size() + " registo(s).");
+            labelInfo.setText("Todos os eventos - " + dados.size() + " registo(s).");
         } catch (SQLException e) {
             AlertHelper.erro("Erro ao carregar eventos", e.getMessage());
         }

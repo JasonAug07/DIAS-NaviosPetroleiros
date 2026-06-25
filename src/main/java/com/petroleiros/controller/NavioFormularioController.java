@@ -134,7 +134,7 @@ public class NavioFormularioController implements Initializable {
     }
 
     private void mostrarErro(String msg) {
-        labelErro.setText("⚠ " + msg);
+        labelErro.setText(msg);
     }
 
     private void limparErro() {

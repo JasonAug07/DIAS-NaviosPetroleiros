@@ -25,7 +25,7 @@ public class ViagemService {
         this.tripulanteDAO = new TripulanteDAO();
     }
 
-    // ── Consultas ─────────────────────────────────────────────────────────────
+    // -- Consultas -------------------------------------------------------------
 
     public List<Viagem> listarTodas() throws SQLException {
         return viagemDAO.findAll();
@@ -54,7 +54,7 @@ public class ViagemService {
         return viagemDAO.gerarProximoId();
     }
 
-    // ── Ciclo de vida da viagem ───────────────────────────────────────────────
+    // -- Ciclo de vida da viagem -----------------------------------------------
 
     /**
      * Cria uma nova viagem no estado Planeada.
@@ -83,7 +83,7 @@ public class ViagemService {
     }
 
     /**
-     * Inicia uma viagem Planeada → Em Curso.
+     * Inicia uma viagem Planeada -> Em Curso.
      * Delega no sp_IniciarViagem que valida e actualiza tudo atomicamente.
      */
     public void iniciarViagem(String viagemId) throws BusinessException, SQLException {
@@ -96,7 +96,7 @@ public class ViagemService {
     }
 
     /**
-     * Conclui uma viagem Em Curso → Concluída.
+     * Conclui uma viagem Em Curso -> Concluída.
      * Delega no sp_ConcluirViagem.
      */
     public void concluirViagem(String viagemId) throws BusinessException, SQLException {
@@ -141,7 +141,7 @@ public class ViagemService {
             throw new BusinessException("Erro ao actualizar viagem.");
     }
 
-    // ── Tripulação ────────────────────────────────────────────────────────────
+    // -- Tripulação ------------------------------------------------------------
 
     /**
      * Associa um tripulante a uma viagem Planeada.
@@ -194,7 +194,7 @@ public class ViagemService {
         }
     }
 
-    // ── Helpers privados ──────────────────────────────────────────────────────
+    // -- Helpers privados ------------------------------------------------------
 
     private void garantirExiste(String viagemId) throws BusinessException, SQLException {
         if (viagemDAO.findById(viagemId).isEmpty())

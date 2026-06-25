@@ -70,9 +70,9 @@ public class TripulanteFormularioController implements Initializable {
             AlertHelper.sucesso("Tripulante guardado.");
             stage.close();
         } catch (BusinessException e) {
-            labelErro.setText("⚠ " + e.getMessage());
+            labelErro.setText(e.getMessage());
         } catch (SQLException e) {
-            labelErro.setText("⚠ Erro BD: " + e.getMessage());
+            labelErro.setText("Erro BD: " + e.getMessage());
         }
     }
 

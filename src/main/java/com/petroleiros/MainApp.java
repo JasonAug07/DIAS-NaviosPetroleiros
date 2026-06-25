@@ -6,6 +6,8 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -27,6 +29,8 @@ public class MainApp extends Application {
         primaryStage.setTitle("Sistema de Gestão de Navios Petroleiros");
         primaryStage.setMinWidth(1024);
         primaryStage.setMinHeight(700);
+        primaryStage.getIcons().add(new Image(
+            MainApp.class.getResourceAsStream("/images/logo.png")));
 
         if (!ligarComRetry()) return;
 
@@ -44,7 +48,13 @@ public class MainApp extends Application {
         Stage dialogStage = new Stage(StageStyle.TRANSPARENT);
         dialogStage.setResizable(false);
 
-        Label lblTitulo  = new Label("🔌  A ligar à base de dados");
+        ImageView logoSplash = new ImageView(new Image(
+            MainApp.class.getResourceAsStream("/images/logo.png")));
+        logoSplash.setFitWidth(48);
+        logoSplash.setFitHeight(48);
+        logoSplash.setPreserveRatio(true);
+
+        Label lblTitulo  = new Label("A ligar à base de dados");
         lblTitulo.getStyleClass().add("conexao-titulo");
 
         Label lblEstado  = new Label("A iniciar ligação...");
@@ -61,7 +71,7 @@ public class MainApp extends Application {
         Button btnCancelar = new Button("Cancelar");
         btnCancelar.getStyleClass().add("conexao-btn-cancelar");
 
-        VBox card = new VBox(12, lblTitulo, lblEstado, pb, lblDetalhe, btnCancelar);
+        VBox card = new VBox(12, logoSplash, lblTitulo, lblEstado, pb, lblDetalhe, btnCancelar);
         card.getStyleClass().add("conexao-card");
 
         VBox root = new VBox(card);

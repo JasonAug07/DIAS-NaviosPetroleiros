@@ -24,7 +24,7 @@
         <placeholder><Label text="Nenhum porto registado."/></placeholder>
     </TableView>
     <HBox spacing="10">
-        <Button text="✏️  Editar"   onAction="#editarSelecionado"/>
-        <Button text="🗑️  Eliminar" onAction="#eliminarSelecionado" styleClass="btn-danger"/>
+        <Button text="Editar"   onAction="#editarSelecionado"/>
+        <Button text="Eliminar" onAction="#eliminarSelecionado" styleClass="btn-danger"/>
     </HBox>
 </VBox>

@@ -47,9 +47,9 @@
 
     <!-- Acções sobre selecção -->
     <HBox spacing="10">
-        <Button text="✏️  Editar"              onAction="#editarSelecionado"/>
-        <Button text="🔄  Alterar Estado"      onAction="#alterarEstado"/>
-        <Button text="🗑️  Eliminar"            onAction="#eliminarSelecionado" styleClass="btn-danger"/>
+        <Button text="Editar"              onAction="#editarSelecionado"/>
+        <Button text="Alterar Estado"      onAction="#alterarEstado"/>
+        <Button text="Eliminar"            onAction="#eliminarSelecionado" styleClass="btn-danger"/>
     </HBox>
 
 </VBox>

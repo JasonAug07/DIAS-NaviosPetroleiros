@@ -10,7 +10,7 @@
     <HBox alignment="CENTER_LEFT" spacing="12">
         <Label text="Cargas (visão global)" styleClass="titulo-modulo"/>
         <Pane HBox.hgrow="ALWAYS"/>
-        <Button text="↻  Atualizar" onAction="#atualizar"/>
+        <Button text="Atualizar" onAction="#atualizar"/>
     </HBox>
     <Separator/>
 

@@ -35,7 +35,7 @@ public class TipoCargoService {
             if (!dao.delete(id)) throw new BusinessException("Tipo de carga não encontrado.");
         } catch (SQLException e) {
             throw new BusinessException(
-                    "Não é possível eliminar — existem cargas com este tipo.", e);
+                    "Não é possível eliminar - existem cargas com este tipo.", e);
         }
     }
 

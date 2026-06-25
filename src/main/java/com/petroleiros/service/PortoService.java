@@ -48,7 +48,7 @@ public class PortoService {
                 throw new BusinessException("Porto não encontrado.");
         } catch (SQLException e) {
             throw new BusinessException(
-                "Não é possível eliminar este porto — existem viagens ou cargas associadas.", e);
+                "Não é possível eliminar este porto - existem viagens ou cargas associadas.", e);
         }
     }
 

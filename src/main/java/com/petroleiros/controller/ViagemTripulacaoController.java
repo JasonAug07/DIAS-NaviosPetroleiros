@@ -49,7 +49,7 @@ public class ViagemTripulacaoController implements Initializable, ViagemAwareCon
     public void setViagem(Viagem viagem, Stage stage) {
         this.viagem = viagem;
         this.stage  = stage;
-        labelTitulo.setText("Tripulação — Viagem " + viagem.getId());
+        labelTitulo.setText("Tripulação - Viagem " + viagem.getId());
         carregarDados();
     }
 

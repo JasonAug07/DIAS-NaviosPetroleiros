@@ -115,7 +115,7 @@ public class Viagem {
     @Override
     public String toString() {
         return id + " | " + (portoOrigem != null ? portoOrigem.getNome() : "?")
-                + " → " + (portoDestino != null ? portoDestino.getNome() : "?")
+                + " -> " + (portoDestino != null ? portoDestino.getNome() : "?")
                 + " [" + estado + "]";
     }
 }

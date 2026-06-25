@@ -77,9 +77,9 @@ public class CargaFormularioController implements Initializable {
             cargaService.adicionarCargaViagem(carga);
             AlertHelper.sucesso("Carga adicionada com sucesso.");
             stage.close();
-        } catch (BusinessException e) { labelErro.setText("⚠ " + e.getMessage());
-        } catch (NumberFormatException e) { labelErro.setText("⚠ Peso, volume e tanques devem ser numéricos.");
-        } catch (SQLException e) { labelErro.setText("⚠ Erro BD: " + e.getMessage()); }
+        } catch (BusinessException e) { labelErro.setText(e.getMessage());
+        } catch (NumberFormatException e) { labelErro.setText("Peso, volume e tanques devem ser numéricos.");
+        } catch (SQLException e) { labelErro.setText("Erro BD: " + e.getMessage()); }
     }
 
     @FXML private void cancelar() { stage.close(); }

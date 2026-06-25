@@ -16,7 +16,7 @@
         <Label text="Navio:"/>
         <ComboBox fx:id="comboNavio" prefWidth="220" promptText="Seleccione um navio"/>
         <Button text="Filtrar" onAction="#filtrarPorNavio"/>
-        <Button text="↻  Ver todos" onAction="#verTodos"/>
+        <Button text="Ver todos" onAction="#verTodos"/>
     </HBox>
 
     <TableView fx:id="tabelaEventos" VBox.vgrow="ALWAYS">

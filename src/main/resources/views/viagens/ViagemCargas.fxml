@@ -26,6 +26,6 @@
         <placeholder><Label text="Sem cargas associadas a esta viagem."/></placeholder>
     </TableView>
     <HBox spacing="10">
-        <Button text="🗑️  Remover Carga" onAction="#removerCarga" styleClass="btn-danger"/>
+        <Button text="Remover Carga" onAction="#removerCarga" styleClass="btn-danger"/>
     </HBox>
 </VBox>

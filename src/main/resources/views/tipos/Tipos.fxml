@@ -28,8 +28,8 @@
                     <placeholder><Label text="Nenhum tipo de navio registado."/></placeholder>
                 </TableView>
                 <HBox spacing="10">
-                    <Button text="✏️  Editar"   onAction="#editarTipoNavio"/>
-                    <Button text="🗑️  Eliminar" onAction="#eliminarTipoNavio" styleClass="btn-danger"/>
+                    <Button text="Editar"   onAction="#editarTipoNavio"/>
+                    <Button text="Eliminar" onAction="#eliminarTipoNavio" styleClass="btn-danger"/>
                 </HBox>
             </VBox>
         </Tab>
@@ -50,8 +50,8 @@
                     <placeholder><Label text="Nenhum tipo de carga registado."/></placeholder>
                 </TableView>
                 <HBox spacing="10">
-                    <Button text="✏️  Editar"   onAction="#editarTipoCarga"/>
-                    <Button text="🗑️  Eliminar" onAction="#eliminarTipoCarga" styleClass="btn-danger"/>
+                    <Button text="Editar"   onAction="#editarTipoCarga"/>
+                    <Button text="Eliminar" onAction="#eliminarTipoCarga" styleClass="btn-danger"/>
                 </HBox>
             </VBox>
         </Tab>

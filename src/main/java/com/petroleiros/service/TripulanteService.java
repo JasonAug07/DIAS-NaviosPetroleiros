@@ -72,7 +72,7 @@ public class TripulanteService {
                 throw new BusinessException("Erro ao eliminar tripulante.");
         } catch (SQLException e) {
             throw new BusinessException(
-                "Não é possível eliminar este tripulante — tem histórico de viagens associado.", e);
+                "Não é possível eliminar este tripulante - tem histórico de viagens associado.", e);
         }
     }
 

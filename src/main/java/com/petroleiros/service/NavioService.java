@@ -72,7 +72,7 @@ public class NavioService {
         if (novoEstado != EstadoOperacional.ATIVO
                 && viagemDAO.findViagemAtivaDoNavio(navioId).isPresent())
             throw new BusinessException(
-                "Não é possível alterar o estado — o navio tem uma viagem Em Curso. " +
+                "Não é possível alterar o estado - o navio tem uma viagem Em Curso. " +
                 "Conclua ou cancele a viagem primeiro.");
 
         navio.setEstadoOperacional(novoEstado);
@@ -92,7 +92,7 @@ public class NavioService {
                 throw new BusinessException("Erro ao eliminar navio.");
         } catch (SQLException e) {
             throw new BusinessException(
-                "Não é possível eliminar este navio — tem viagens registadas no histórico.", e);
+                "Não é possível eliminar este navio - tem viagens registadas no histórico.", e);
         }
     }
 
